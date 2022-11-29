@@ -1,0 +1,128 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--backgound-grey);
+}
+
+.footer__container {
+    display: flex;
+    height: 139px;
+    align-items: baseline;
+}
+
+.footer__list {
+    @extend %list;
+}
+
+.footer__adress-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer__adress-link {
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+    font-style: normal;
+
+    line-height: 1.71;
+    text-decoration: none;
+    font-style: normal;
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+}
+
+.footer__contacts {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.71;
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        }
+}
+
+.footer__social {
+    width: 206px;
+    height: 80px;
+    margin-right: 93px;
+}
+
+.footer__section-name {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--primary-white-color);
+}
+
+.footer__social-list {
+    @extend %list;
+
+    display: flex;
+    gap: 10px;
+}
+
+.footer__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--primary-white-color);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+            background-color: var(--accent-color);
+        }
+}
+
+.footer__form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 570px;
+}
+
+.footer__label {
+    margin: 0;
+    padding: 15px 0 15px 16px;
+    outline: transparent;
+
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--backgound-grey);
+    color: rgba(255, 255, 255, 0.6);
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.6);
+        }
+}
+
+.footer__icon-subscribe {
+     margin-left: 10px;
+}

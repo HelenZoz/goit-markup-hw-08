@@ -1,0 +1,42 @@
+.work {
+    padding-bottom: 94px;
+}
+
+.work__title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.work__img {
+    @extend %list;
+    
+    display: flex;
+    gap: 30px;
+}
+
+.work__card {
+    position: relative;
+}
+
+.work__owerlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.work__text {
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+}

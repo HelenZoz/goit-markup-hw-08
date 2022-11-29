@@ -1,0 +1,192 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+
+    .backdrop.is-hidden & {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+}
+
+.modal-form__btn {
+    display: block;
+    min-width: 200px;
+}
+
+.modal__item {
+    fill: var(--logo-color-black);
+    transition: fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+        }
+}
+
+.modal-form {
+    display: block;
+    padding: 40px;
+}
+
+.modal-form__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.modal-form__label-name {
+    display: block;
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+}
+
+.modal-form__wrapper {
+    position: relative;
+}
+
+.modal-form__field-input {
+    padding: 0;
+    padding-left: 42px;
+    margin-bottom: 10px;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 250ms var(--accent-color);
+
+    &:focus {
+            border-color: var(--accent-color);
+        }
+}
+
+.modal-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-80%);
+
+    transition: fill 250ms var(--timing-function);
+
+    &:focus {
+            fill: var(--accent-color);
+        }
+}
+
+.modal-form__field-input:focus+.modal-form__icon {
+    fill: var(--accent-color);
+}
+
+.modal-form__comment {
+    padding: 12px 16px;
+    margin: 0;
+    margin-bottom: 20px;
+    resize: none;
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    color: var(--text-color);
+
+    transition: color 250ms var(--timing-function);
+
+    &:focus {
+            border-color: var(--accent-color);
+        }
+
+    &::placeholder {
+            font-size: 12px;
+            line-height: calc(14 / 12);
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+
+.modal-form__accept {
+    margin-bottom: 30px;
+}
+
+.modal-form__accept-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    user-select: none;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--text-color);
+}
+
+.modal-form__checkbox {
+    appearance: none;
+}
+
+.modal-form__checkbox-uncheck {
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
+
+.modal-form__checkbox:checked+.modal-form__checkbox-icon .modal-form__checkbox-uncheck {
+    opacity: 0;
+}
+
+.modal-form__checkbox-check {
+    opacity: 0;
+    transition: filter 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+
+.modal-form__checkbox:checked+.modal-form__checkbox-icon .modal-form__checkbox-check,
+.modal-form__checkbox:checked:focus+.modal-form__checkbox-icon .modal-form__checkbox-check {
+    opacity: 1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal-form__accept-link {
+    line-height: 1.71;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+
+    text-underline-position: under;
+}
