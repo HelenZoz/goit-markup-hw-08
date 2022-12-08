@@ -1,36 +1,50 @@
 .work {
+    @media screen and (max-width: 1199px){
+    display: none;
+    }
+
+    @media screen and (min-width: 1200px){
     padding-bottom: 94px;
+    }
 }
 
 .work__title {
-    margin: 0;
+    @media screen and (min-width: 1200px){
     margin-bottom: 50px;
 
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    }
 }
 
 .work__img {
     @extend %list;
-    
+
+    @media screen and (min-width: 1200px) {
     display: flex;
     gap: 30px;
+    }
 }
 
 .work__card {
+    @media screen and (min-width: 1200px){
     position: relative;
+    }
 }
 
 .work__owerlay {
+    @media screen and (min-width: 1200px) {
     position: absolute;
     bottom: 0;
     width: 100%;
 
     background: rgba(47, 48, 58, 0.8);
+    }
 }
 
 .work__text {
+    @media screen and (min-width: 1200px){
     margin: 0;
     padding-top: 27px;
     padding-bottom: 27px;
@@ -39,4 +53,5 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--primary-white-color);
+    }
 }

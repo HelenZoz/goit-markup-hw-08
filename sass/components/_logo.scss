@@ -2,32 +2,48 @@
     color: var(--accent-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.11;
+    font-size: 24px;
+    line-height: 1.17;
     text-decoration: none;
 
     transition: color 250ms var(--timing-function);
+
+    @media screen and (min-width: 1200px){
+    font-size: 26px;
+    line-height: 1.11;
+    text-align: start;
+    }
 }
 
 .logo .logo--black {
-    margin-right: 93px;
     color: var(--logo-color-black);
-    font-family: Raleway, sans-serif; 
     
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+
+    @media screen and (max-width: 767px){
+    margin: 0;
+    }
+
+    @media screen and (min-width: 1200px){
+    margin: 0;
+    margin-right: 92px;
+
     }
 }
 
 .footer__logo {
-    margin-right: 70px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px){
+    margin-right: 70px;
     width: 231px;
+    }
 }
 
 .logo .logo--white {
-    margin-right: 156px;
     color: var(--primary-white-color);
     transition: color 250ms var(--timing-function);
 
@@ -35,4 +51,9 @@
     &:focus {
         color: var(--accent-color);
     }
-}
+
+    @media screen and (min-width: 1200px){
+    margin-right: 156px;
+    }
+}  
+    

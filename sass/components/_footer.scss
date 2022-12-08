@@ -6,9 +6,24 @@
 }
 
 .footer__container {
+    width: 450px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
     display: flex;
-    height: 139px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 738px;
+    justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 1200px;
+    flex-wrap: nowrap;
     align-items: baseline;
+    height: 139px;
+    text-align: left;
+    }
 }
 
 .footer__list {
@@ -16,17 +31,27 @@
 }
 
 .footer__adress-item:not(:last-child) {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px){
     margin-bottom: 9px;
+    }
+}
+
+.footer__adress-item:last-child {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    }
 }
 
 .footer__adress-link {
     margin-bottom: 20px;
     color: var(--primary-white-color);
     font-style: normal;
-
     line-height: 1.71;
     text-decoration: none;
-    font-style: normal;
 
     transition: color 250ms var(--timing-function);
 
@@ -35,6 +60,9 @@
         color: var(--accent-color);
     }
 
+    @media screen and (min-width: 1200px) {
+    
+    }
 }
 
 .footer__contacts {
@@ -52,9 +80,18 @@
 }
 
 .footer__social {
-    width: 206px;
+    width: 450px;
     height: 80px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+    width: 206px;
+    }
+
+    @media screen and (min-width: 1200px){
+    width: 206px;
     margin-right: 93px;
+    }
 }
 
 .footer__section-name {
@@ -73,6 +110,18 @@
 
     display: flex;
     gap: 10px;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+    width: 206px;
+    }
+
+    @media screen and (min-width: 1200px){
+    // display: flex;
+    // gap: 10px;
+    }
 }
 
 .footer__icon {
@@ -94,20 +143,23 @@
 }
 
 .footer__form {
+    width: 450px;
+
+    @media screen and (min-width: 1200px){
     display: flex;
     gap: 12px;
     align-items: center;
     justify-content: center;
     width: 570px;
+    }
 }
 
 .footer__label {
-    margin: 0;
-    padding: 15px 0 15px 16px;
     outline: transparent;
 
-    width: 358px;
+    width: 450px;
     height: 50px;
+    margin-bottom: 20px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -121,8 +173,18 @@
         line-height: 1.25;
         color: rgba(255, 255, 255, 0.6);
         }
+
+    @media screen and (min-width: 1200px){
+    margin: 0;
+    width: 358px;
+    padding: 15px 0 15px 16px;
+    }
 }
 
 .footer__icon-subscribe {
-     margin-left: 10px;
+    margin-left: 12px;
+
+    @media screen and (min-width: 1200px){
+    margin-left: 10px;
+    }
 }

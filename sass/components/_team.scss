@@ -1,53 +1,106 @@
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--background-lightgrey)
+    padding: 60px 0px;
+    background-color: var(--background-lightgrey);
+
+    @media screen and (min-width: 1200px){
+    padding: 94px 0;
+    }
 }
 
 .team__title {
-    margin: 0;
-    margin-bottom: 50px;
-    font-size: 36px;
+    margin-bottom: 30px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+    width: 738px;
+    }
+
+    @media screen and (min-width: 1200px){
+    margin-bottom: 50px;
+    font-size: 36px;
+    width: 1170px;
+    }
 }
 
 .team__list {
     @extend %list;
 
+    @media screen and (min-width: 768px){
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    }
 }
 
 .team__border {
+    width: 450px;
     background-color: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+    width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+    }
 }
 
 .team__name {
-    margin: 0;
     margin-bottom: 10px;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    width: 450px;
+
+    @media screen and (min-width: 768px){
+    width: 354px;
+    }
+
+    @media screen and (min-width: 1200px){
+    width: 270px;
+    }
 }
 
 .team__profession {
-    margin: 0;
     margin-bottom: 16px;
-
-    color: var(--text-color);
+    width: 450px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    width: 450px;
+    color: var(--text-color);
+
+    @media screen and (min-width: 768px) {
+    width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+    }
 }
 
 .team__card {
     padding-top: 30px;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 270px;
     padding-bottom: 30px;
+    }
 }
 
 .team-social {
@@ -57,6 +110,15 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+    width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+    }
 }
 
 .team-social__item {
