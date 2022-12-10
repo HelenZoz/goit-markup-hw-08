@@ -12,16 +12,11 @@
     font-size: 28px;
     line-height: 1.17;
     text-align: center;
-    width: 450px;
-
-    @media screen and (min-width: 768px) {
-    width: 768px;
-    }
+    width: 100%;
 
     @media screen and (min-width: 1200px){
     margin-bottom: 50px;
     font-size: 36px;
-    width: 1170px;
     }
 }
 
@@ -31,14 +26,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    width: 450px;
-
-    @media screen and (min-width: 768px) {
-    width: 738px;
-    }
+    width: 100%;
 
     @media screen and (min-width: 1200px) {
-    width: 1170px;
     flex-wrap: nowrap;
     }
 }

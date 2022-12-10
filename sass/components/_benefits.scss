@@ -11,11 +11,9 @@
 .benefits__item {
     @extend %list;
 
-    @media screen and (min-width: 768px){
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    }
 
     @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
@@ -66,8 +64,7 @@
 .benefits__text {
     color: var(--text-color);
     line-height: 1.71;
-    width: 450px;
-    margin-bottom: 30px;
+    width: 100%;
     
     @media screen and (min-width: 768px){
     margin-bottom: 0;

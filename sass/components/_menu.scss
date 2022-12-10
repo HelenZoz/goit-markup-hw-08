@@ -116,7 +116,8 @@
     color: var(--text-color);
 }
 
-.mobile-social {
+.mobile-social,
+.mobile-social__item {
     display: flex;
 }
 
@@ -129,16 +130,23 @@
     text-decoration: none;
     color: var(--accent-color);
 
-    &:not(:last-child)::after {
+    &::after{
     content: "";
-
+    
     width: 22px;
-    height: 0px;
+    height: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
     margin-top: 10px;
     }
+
+    .mobile-social__item:last-child &::after {
+    content: none;
+    }
 }
+
+
+
 
 
 
