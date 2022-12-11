@@ -34,17 +34,18 @@
 }
 
 .clients__link {
+    @media screen and (max-width: 479px), (min-width: 480px) {
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 1px solid var(--fill-icon);
     border-radius: 4px;
-
+    
     width: 210px;
     height: 92px;
     
     transition: border-color 250ms var(--timing-function);
+    }
 
     @media screen and (min-width: 768px) {
     width: 226px;
