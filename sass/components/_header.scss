@@ -1,11 +1,9 @@
 .header__site-nav {
-    @media screen and (min-width: 480px) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
     padding: 16px 0;
     height: 60px;
-    }
 
     @media screen and (min-width: 768px) {
     height: 80px;
